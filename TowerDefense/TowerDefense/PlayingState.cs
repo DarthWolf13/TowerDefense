@@ -52,6 +52,18 @@ namespace TowerDefense
                     this.bullets.Add(new Bullet(autoFireCannon.Position, autoFireCannon.AngularDirection * 120));
                 }
             }
+
+            foreach(Bullet bullet in bullets.Objects)
+            {
+                foreach(Ufo ufo in ufos.Objects)
+                {
+                    if (bullet.CollidesWith(ufo))
+                    {
+                        bullet.Visible = false;
+                        ufo.Visible = false;
+                    }
+                }
+            }
         }
     }
 }
