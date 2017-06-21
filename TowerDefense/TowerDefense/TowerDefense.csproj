@@ -57,6 +57,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoFireCannon.cs" />
+    <Compile Include="Bullet.cs" />
     <Compile Include="homeBase.cs" />
     <Compile Include="PlayingState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
