@@ -47,9 +47,14 @@ namespace TowerDefense
 
             foreach(AutoFireCannon autoFireCannon in cannons.Objects)
             {
-                if(autoFireCannon.HasFired == true)
+                foreach(Ufo ufo in ufos.Objects)
                 {
-                    this.bullets.Add(new Bullet(autoFireCannon.Position, autoFireCannon.AngularDirection * 120));
+                    if (autoFireCannon.HasFired == true)
+                    {
+                        this.bullets.Add(new Bullet(autoFireCannon.Position, autoFireCannon.AngularDirection * 120));
+                    }
+
+                    autoFireCannon.LookAt(ufo);
                 }
             }
 
