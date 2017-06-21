@@ -10,6 +10,7 @@ namespace TowerDefense
     {
         homeBase home;
         GameObjectList ufos, cannons, bullets;
+        int killCount;
 
         public PlayingState()
         {
@@ -55,6 +56,11 @@ namespace TowerDefense
                     }
 
                     autoFireCannon.LookAt(ufo);
+
+                    if (ufo.CollidesWith(home))
+                    {
+                        TowerDefense.GameStateManager.SwitchTo("GameOverState");
+                    }
                 }
             }
 
@@ -66,6 +72,11 @@ namespace TowerDefense
                     {
                         bullet.Visible = false;
                         ufo.Visible = false;
+
+                        if(ufos.Objects.All(x => !x.Visible))
+                        {
+                            TowerDefense.GameStateManager.SwitchTo("WinState");
+                        }
                     }
                 }
             }

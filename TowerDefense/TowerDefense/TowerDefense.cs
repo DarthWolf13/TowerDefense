@@ -35,6 +35,8 @@ namespace TowerDefense
 
             // TODO: use this.Content to load your game content here
             gameStateManager.AddGameState("PlayingState", new PlayingState());
+            gameStateManager.AddGameState("GameOverState", new GameOverState());
+            gameStateManager.AddGameState("WinState", new WinState());
             gameStateManager.SwitchTo("PlayingState");
         }
     }

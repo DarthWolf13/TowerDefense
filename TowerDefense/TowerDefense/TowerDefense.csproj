@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AutoFireCannon.cs" />
     <Compile Include="Bullet.cs" />
+    <Compile Include="GameOverState.cs" />
     <Compile Include="homeBase.cs" />
     <Compile Include="PlayingState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="RotatingSpriteGameObject.cs" />
     <Compile Include="TowerDefense.cs" />
     <Compile Include="Ufo.cs" />
+    <Compile Include="WinState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
